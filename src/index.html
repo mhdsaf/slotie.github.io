@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Metadata and title -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Slotie</title>
+
+		<!-- bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<!-- local CSS -->
+		<link rel="stylesheet" href="style.css" />
+		<!-- splide CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/themes/splide-sea-green.min.css"
+		/>
+
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<style>
+			.splide__slide {
+				transform: scale(0.9, 0.9);
+				display: inline-flex;
+				vertical-align: middle;
+				transition: transform 350ms ease;
+				transition: transform 350ms ease, -webkit-transform 350ms ease;
+			}
+			.splide__slide.is-active {
+				border-radius: 0.25em !important;
+				transform: scale(1, 1);
+				transition: transform 350ms ease;
+				transition: transform 350ms ease, -webkit-transform 350ms ease;
+			}
+			.splide-image {
+				width: 100%;
+				height: 100%;
+				/* margin: 0.5em; */
+				-webkit-box-flex: 0;
+				-webkit-flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				flex: 0 0 auto;
+				border-radius: 0.25em;
+				-webkit-transition: -webkit-transform 350ms ease;
+				transition: -webkit-transform 350ms ease;
+				transition: transform 350ms ease;
+				transition: transform 350ms ease, -webkit-transform 350ms ease;
+				-o-object-fit: cover;
+				object-fit: cover;
+			}
+		</style>
+	</head>
+	<body style="background-color: rgb(56, 56, 56); color: white">
+		<section class="section1">
+			<img
+				src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/6183e7e6f0946e5a876ffa39_Dice.png"
+				class="dice"
+				style="
+					will-change: transform;
+					transform: translate3d(0px, 3.5617vw, 0px) scale3d(1, 1, 1)
+						rotateX(0deg) rotateY(0deg) rotateZ(76.779deg) skew(0deg, 0deg);
+					transform-style: preserve-3d;
+				"
+			/>
+			<img
+				src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/6183e9b9b3d3d1640af5e1f0_Ether.png"
+				class="ether"
+				style="
+					will-change: transform;
+					transform: translate3d(0px, -2.98386vw, 0px) scale3d(1, 1, 1)
+						rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+					transform-style: preserve-3d;
+				"
+			/>
+			<div class="container position-relative">
+				<nav class="navbar fixed-top navbar-expand-lg shadow">
+					<div class="container-fluid container" style="padding: 0px">
+						<a class="navbar-brand text-white" href="#"
+							><img
+								src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/6189178282a5fa8a2a1280e8_NFT%20LOGO%201-01.svg"
+								class="logo"
+							/>
+							Slotie</a
+						>
+						<button
+							class="navbar-toggler collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarTogglerDemo2"
+							aria-controls="navbarTogglerDemo2"
+							aria-label="Toggle navigation"
+							id="nav-toggler"
+						>
+							<!-- <span class="navbar-toggler-icon"></span> -->
+							<span class="toggler-icon top-bar"></span>
+							<span class="toggler-icon middle-bar"></span>
+							<span class="toggler-icon bottom-bar"></span>
+						</button>
+						<div
+							class="collapse navbar-collapse text-center"
+							id="navbarTogglerDemo2"
+						>
+							<div class="mx-auto"></div>
+							<ul class="navbar-nav">
+								<div
+									style="display: block; opacity: 1"
+									class="horizontal-line only-mobile"
+								></div>
+
+								<li class="nav-item">
+									<a class="nav-link" href="#">What are Sloties?</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Benefits</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Roadmap</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Rarity</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Partners</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Team</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">FAQ</a>
+								</li>
+								<li class="nav-item" style="padding-top: 2px">
+									<button class="btn btn-navbar">REDEEM</button>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#"
+										><img
+											class="nav-socials"
+											src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/617c07efa78818323b058e31_Logo%20-%20Twitter.svg"
+											alt="twitter" />
+										<img
+											class="nav-socials"
+											src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/617c07ef9e95ea4de615e71f_Logo%20-%20Discord.svg"
+											alt="discord"
+											width="30px"
+											height="17px"
+									/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<br /><br /><br />
+			<!-- <div class="container position-relative">
+				<div style="display: block; opacity: 1" class="horizontal-line"></div>
+			</div> -->
+			<div class="container mt-5 position-relative">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 pt-lg-5 pt-md-0">
+						<div class="font-lg fw-bold lh-compact pb-3">
+							SOLD OUT IN UNDER 5 MINUTES
+						</div>
+						<div class="font-md pb-3">
+							Sloties are your ticket into the largest and fastest growing
+							online casino network on the blockchain.
+						</div>
+						<div class="d-block gap-3">
+							<button class="btn btn-black shadow-none">
+								Buy Slotie on Opensea
+							</button>
+							<button class="btn btn-black font-md shadow-none">
+								Buy Slotie on Opensea
+							</button>
+						</div>
+					</div>
+					<div
+						class="col-lg-6 col-md-12 hero-slotie-image-container text-lg-end text-md-center"
+					>
+						<img
+							class="hero-slotie-image img-fluid"
+							src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/6182a93fa2f9a536664dc782_NFT%20Casino%20Man%20-%20No%20BG%20-%20Gradient.png"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section2">
+			<div class="container border partner-container">
+				<div class="container title">Press About Us</div>
+				<div class="container">
+					<div class="row"></div>
+				</div>
+			</div>
+		</section>
+		<section class="section3">
+			<div class="container">
+				<div class="row">
+					<div
+						class="col-lg-6 col-md-12 hero-slotie-image-container text-lg-start text-md-center order-lg-1 order-md-2"
+					>
+						<img
+							class="hero-slotie-image img-fluid"
+							src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/61893410dd6b3875959a568b_Aztec%20God%20(1).png"
+						/>
+					</div>
+					<div class="col-lg-6 col-md-12 order-lg-2 order-md-1">
+						<div class="section-title">What are Sloties?</div>
+						<p>
+							Sloties are your ticket into the largest and fastest growing
+							online Casino network on the blockchain. With only 10,000 VIP
+							members ever to be minted, Sloties grant holders access to the new
+							world of Defi Gambling. Sloties grant proof of ownership on the
+							Ethereum blockchain, and are based on the ERC-721 standard. More
+							than your ordinary community, Sloties provide real world benefits
+							in over 150 Casinos worldwide. This is not your average Slot
+							Machine: with Sloties it's your house, your rules.
+						</p>
+						<p>
+							Each Slotie NFT is one of a kind, with varying degrees of rarity.
+							And unlike other NFTs with only superficial rarity, the rarity of
+							your Slotie will determine your share from Exclusive Holders
+							Rewards. The rarer your Slotie, the more rewards it will generate.
+						</p>
+						<p>
+							They are non-fungible, as these tokens are not interchangeable
+							with one another.
+						</p>
+						<p>Each Slotie is 100% unique.</p>
+						<div
+							style="display: block; opacity: 1"
+							class="horizontal-line"
+						></div>
+						<br />
+						<div class="d-flex">
+							<div class="flex-shrink-0 align-self-center">
+								<img
+									src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/617c13c06f34d211cecda2cc_Icon%20-%20Quote.svg"
+								/>
+							</div>
+							<div class="flex-grow-1 ms-3">
+								<div>
+									Excellent feature! I love it. One day I'm definitely going to
+									put this Bootstrap component into use and I'll let you know
+									once I do.
+								</div>
+							</div>
+						</div>
+						<div>
+							<small
+								><strong>Mathias Kozlowski</strong>, Head of Business
+								Development @ Elia Software</small
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="splide slider1">
+					<div class="splide__track w-dyn-list">
+						<div role="list" class="splide__list w-dyn-items">
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935f503b8cd05bfaf0c08_Medusa%20Gorgona%20(1).jpg"
+									loading="lazy"
+									alt="Medusa Gorgona"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935f503b8cd05bfaf0c08_Medusa%20Gorgona%20(1)-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935f503b8cd05bfaf0c08_Medusa%20Gorgona%20(1).jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935e965e0fb973d961aed_Irish%20Lucky.jpg"
+									loading="lazy"
+									alt="Irish Lucky"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935e965e0fb973d961aed_Irish%20Lucky-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935e965e0fb973d961aed_Irish%20Lucky.jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935d78f80ad5794eb4e4f_Pharaoh%20(1).jpg"
+									loading="lazy"
+									alt="Paraoh"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935d78f80ad5794eb4e4f_Pharaoh%20(1)-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935d78f80ad5794eb4e4f_Pharaoh%20(1).jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935cc7ba01884d4fca331_Casino%20Man%20(2).jpg"
+									loading="lazy"
+									alt="Casino Man"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935cc7ba01884d4fca331_Casino%20Man%20(2)-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935cc7ba01884d4fca331_Casino%20Man%20(2).jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935bcb53f1928f450275d_Poseidon%20(1).jpg"
+									loading="lazy"
+									alt="Poseidon"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935bcb53f1928f450275d_Poseidon%20(1)-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935bcb53f1928f450275d_Poseidon%20(1).jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935ab0758d04734d1a905_Aztec%20God.jpg"
+									loading="lazy"
+									alt="Aztec God"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935ab0758d04734d1a905_Aztec%20God-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935ab0758d04734d1a905_Aztec%20God.jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/6189359e78467ac3c82f86ad_Eagle%20Man.jpg"
+									loading="lazy"
+									alt="Eagle Man"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/6189359e78467ac3c82f86ad_Eagle%20Man-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/6189359e78467ac3c82f86ad_Eagle%20Man.jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935816cc3a894c3d4007a_Viking.jpg"
+									loading="lazy"
+									alt="Viking"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935816cc3a894c3d4007a_Viking-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935816cc3a894c3d4007a_Viking.jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/61893576932181a6ec7d8ee2_cowboy.jpg"
+									loading="lazy"
+									alt="Cowboy"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/61893576932181a6ec7d8ee2_cowboy-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/61893576932181a6ec7d8ee2_cowboy.jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+							<div role="listitem" class="splide__slide w-dyn-item">
+								<img
+									src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935665a5afdccea6094fe_Mad%20scientist%20(1).jpg"
+									loading="lazy"
+									alt="Mad Scientist"
+									sizes="(max-width: 479px) 29vw, (max-width: 767px) 22vw, (max-width: 991px) 18vw, 16vw"
+									srcset="
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935665a5afdccea6094fe_Mad%20scientist%20(1)-p-500.jpeg 500w,
+										https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935665a5afdccea6094fe_Mad%20scientist%20(1).jpg        700w
+									"
+									class="image splide-image"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="section-title">Slotie Benefits and Broad Utility.</div>
+				<p>
+					When you buy a Slotie, you’re not simply buying an item or a
+					provably-rare piece of art. You’re gaining membership access to the
+					Slotie Club whose benefits and offerings are as follows.
+				</p>
+				<div style="display: block; opacity: 1" class="horizontal-line"></div>
+				<br />
+				<div class="d-flex mb-5">
+					<div class="">
+						<img
+							class="rounded"
+							src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935f503b8cd05bfaf0c08_Medusa%20Gorgona%20(1).jpg"
+							width="140px"
+							height="140px"
+						/>
+					</div>
+					<div class="ms-5 align-self-center">
+						<div class="subsection-title">Exclusive Holder Reward - EHR</div>
+						<div>
+							After integrating a new online Slotie themed slot game in crypto
+							casinos, we will receive about 12% commission from each partner.
+							80% of this money goes to Slotie NFT holders. Exact share of each
+							Slotie will be linked with it's rarity. EHR is a stackable
+							benefit, meaning more Sloties = more profit share. The money will
+							be transferred periodically in form of WATTs, that holders can
+							exchange to ETH.
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-5">
+					<div class="me-5 align-self-center">
+						<div class="subsection-title">Exclusive Holder Reward - EHR</div>
+						<div>
+							After integrating a new online Slotie themed slot game in crypto
+							casinos, we will receive about 12% commission from each partner.
+							80% of this money goes to Slotie NFT holders. Exact share of each
+							Slotie will be linked with it's rarity. EHR is a stackable
+							benefit, meaning more Sloties = more profit share. The money will
+							be transferred periodically in form of WATTs, that holders can
+							exchange to ETH.
+						</div>
+					</div>
+					<div class="">
+						<img
+							class="rounded"
+							src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935f503b8cd05bfaf0c08_Medusa%20Gorgona%20(1).jpg"
+							width="140px"
+							height="140px"
+						/>
+					</div>
+				</div>
+				<div class="d-flex mb-5">
+					<div class="">
+						<img
+							class="rounded"
+							src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935f503b8cd05bfaf0c08_Medusa%20Gorgona%20(1).jpg"
+							width="140px"
+							height="140px"
+						/>
+					</div>
+					<div class="ms-5 align-self-center">
+						<div class="subsection-title">Exclusive Holder Reward - EHR</div>
+						<div>
+							After integrating a new online Slotie themed slot game in crypto
+							casinos, we will receive about 12% commission from each partner.
+							80% of this money goes to Slotie NFT holders. Exact share of each
+							Slotie will be linked with it's rarity. EHR is a stackable
+							benefit, meaning more Sloties = more profit share. The money will
+							be transferred periodically in form of WATTs, that holders can
+							exchange to ETH.
+						</div>
+					</div>
+				</div>
+				<div class="d-flex mb-5">
+					<div class="me-5 align-self-center">
+						<div class="subsection-title">Exclusive Holder Reward - EHR</div>
+						<div>
+							After integrating a new online Slotie themed slot game in crypto
+							casinos, we will receive about 12% commission from each partner.
+							80% of this money goes to Slotie NFT holders. Exact share of each
+							Slotie will be linked with it's rarity. EHR is a stackable
+							benefit, meaning more Sloties = more profit share. The money will
+							be transferred periodically in form of WATTs, that holders can
+							exchange to ETH.
+						</div>
+					</div>
+					<div class="">
+						<img
+							class="rounded"
+							src="https://uploads-ssl.webflow.com/617ee297ce34f79c5e2d6a20/618935f503b8cd05bfaf0c08_Medusa%20Gorgona%20(1).jpg"
+							width="140px"
+							height="140px"
+						/>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="section-title">Road Map</div>
+				<p>Empty for now</p>
+			</div>
+			<div class="container">
+				<div class="section-title">Slotie Specifications and Rarity.</div>
+				<p>
+					Slotie is a collection of 10,000 unique NFT tokens on a ERC-721 smart
+					contract, levitating on the Ethereum blockchain. Each Slotie is
+					exceptional, some classy, some crazy. All of them have different
+					attributes and perks: Rakeback from partner casinos, Lottery Tickets,
+					Watts generation for breeding, etc.
+				</p>
+				<p><strong>Every Slotie is unique.</strong></p>
+				<div class="d-flex align-items-center">
+					<div>HATS</div>
+					<div class="flex-grow-1 ms-2 me-2">
+						<div
+							style="display: block; opacity: 1"
+							class="horizontal-line"
+						></div>
+					</div>
+					<div>21 PIECES</div>
+				</div>
+				<div class="component-container">
+					<img
+						src="https://uploads-ssl.webflow.com/617c01210e8f0f423616fdd8/6189424e5a5afd4ca9611223_hat.png"
+						class="img-fluid"
+					/>
+				</div>
+			</div>
+			<br />
+			<div class="container">
+				<p class="section-title">Frequently Asked Questions</p>
+				<div
+					class="d-flex QA-Collapse"
+					data-bs-toggle="collapse"
+					href="#QA-Collapse"
+					aria-expanded="false"
+					aria-controls="QA-Collapse"
+				>
+					<div>
+						<img id="QA-Collapse-Toggler" src="assets/svgs/plus.svg" width="24px" height="24px" />
+					</div>
+					<div class="question ms-3">What are Slotie NFT?</div>
+				</div>
+				<div class="collapse" id="QA-Collapse">
+					<div class="d-flex">
+						<div style="width: 24px"></div>
+						<div class="ms-3 border-start ps-2">Lorem ipsum dolor sit amet.</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+	</body>
+	<!-- JavaScript Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"
+	></script>
+	<!-- splide.js -->
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+	<!-- local js -->
+	<script src="script.js"></script>
+</html>
